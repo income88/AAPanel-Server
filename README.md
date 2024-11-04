@@ -1,4 +1,19 @@
 #!/bin/sh
 # Install Aapanel trên Ubuntu 22.04
 
-cd /tmp/ && yum install git -y && git clone https://github.com/income88/AAPanel-Server && cd AAPanel-Server/ && sed -i -e 's/\r$//' install_7.0_en.sh && chmod 755 install_7.0_en.sh && ./install_7.0_en.sh
+nano script.sh : tạo ra file mới rồi copy hết dữ liệu trên file install_7.0_en vào 
+Ctrl + O rồi Enter để lưu file
+Ctrl + X để thoát 
+
+chmod +x script.sh :cấp quyền thực thi
+
+bash script.s.sh :chạy file script mới tạo
+
+
+# Hoặc
+Ubuntu
+wget -O install_7.0_en.sh https://github.com/income88/AAPanel-Server/install_7.0_en.sh && sudo bash install_7.0_en.sh
+
+Cenos 
+yum install -y wget && wget -O install_7.0_en.sh https://github.com/income88/AAPanel-Server/install_7.0_en.sh && bash install_7.0_en.sh
+
